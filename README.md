@@ -21,17 +21,17 @@
 다음 `<표1-수집되는 데이터에 따른 타입과 컬럼명>`와 같이 DB에는 다음과 같은 데이터들이 저장이 된다.
 | `데이터 타입` |`컬럼 이름`|`NULL 허용`|
 | :---: | :---:| :---: |
-| Key | ID | [] |
-| Date | 날짜 | [] |
-| nvarchar | 노래제목 | [] |
-| nvarchar | 아티스트명 | [] |
-| nvarchar | 앨범명 | [] |
-| int | 멜론 순위 | - [x] |
-| int | 지니 뮤직 순위 | - [x] |
-| int | 바이브 순위 | - [x] |
-| int | 유튜브 뮤직 순위 | - [x] |
-| int | 애플 뮤직 순위 | - [x] |
-| int | 벅스 뮤직 순위 | - [x] |
+| Key | ID |  |
+| Date | 날짜 |  |
+| nvarchar | 노래제목 |  |
+| nvarchar | 아티스트명 |  |
+| nvarchar | 앨범명 |  |
+| int | 멜론 순위 | [x] |
+| int | 지니 뮤직 순위 | [x] |
+| int | 바이브 순위 | [x] |
+| int | 유튜브 뮤직 순위 | [x] |
+| int | 애플 뮤직 순위 | [x] |
+| int | 벅스 뮤직 순위 | [x] |
 #### <표1-수집되는 데이터에 따른 타입과 컬럼명>
 
 각컬럼은Null 값이허용되지않는다 다만 순위의 경우 차트인 차트아웃에 따라 순위에 존재 할 수도 존재하지 않을 수도 있기 때문에 순위의 경우에는 Null 값을허용한다. 또한 국내탑100의 경우에도 해외음원이 존재 할 수있고. 이러한 해외음원이 영어 뿐만 아니라 일본어, 중국어, 혹은 아랍어 일 수도 있기 때문에 노래 제목과 아티스트명, 앨범명의 경우에는 nvarchar를 허용한다.실제 데이터가 저장 되는것은 다음<표2–실제데이터저장> 과같다.  
@@ -45,7 +45,7 @@
 ### 3. Data Crolling
 데이터를 수집하는 사이트는 다음<표3–사이트별 차트순위>와 같이 총6 가지의 사이트를 수집한다.
 | `멜론` | `지니` | `바이브` | `유튜브` | `애플` | `벅스` |
-| ---: | :---:| :---: | :---: | :---: | :---: |
+| :---: | :---:| :---: | :---: | :---: | :---: |
 | ![image](https://user-images.githubusercontent.com/37532168/82537441-fe244680-9b84-11ea-8f61-6dda972ddab2.png) | ![image](https://user-images.githubusercontent.com/37532168/82537448-01b7cd80-9b85-11ea-92f7-63a64926438e.png) | ![image](https://user-images.githubusercontent.com/37532168/82537452-04b2be00-9b85-11ea-87e1-d8596865f7e7.png) | ![image](https://user-images.githubusercontent.com/37532168/82537463-08dedb80-9b85-11ea-9538-b441dc087cb1.png) | ![image](https://user-images.githubusercontent.com/37532168/82537468-0b413580-9b85-11ea-89be-e8c7a8cb8d7a.png) | ![image](https://user-images.githubusercontent.com/37532168/82537475-0d0af900-9b85-11ea-8d45-d65c96b90343.png) | 
 #### <표3 – 사이트별 차트순위>
 
