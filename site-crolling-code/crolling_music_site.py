@@ -139,8 +139,8 @@ def apple_music_crolling(driver) :
     import time
     time.sleep(5) # 애플 뮤직의 경우 최초 접속시 충분한 시간이 지난후에 Script 문이 Loading 된다
     for i in range(3, 103) : # 애플뮤직의 최초 2개 컬럼의 경우에는 베스트 탑 100 곡이 아닌 추천곡이 출력된다. 
-        title, artist = driver.find_element_by_xpath('//*[@id="ember16"]/div/div[1]/div[2]/div[2]/div[{0}]/div[2]'.format(i)).text.split("\n")
-        album_name = driver.find_element_by_xpath('//*[@id="ember16"]/div/div[1]/div[2]/div[2]/div[{0}]/div[3]'.format(i)).text
+        title, artist = driver.find_element_by_xpath('//*[@id="ember14"]/div/div[1]/div[2]/div[2]/div[{0}]/div[2]'.format(i)).text.split("\n")
+        album_name = driver.find_element_by_xpath('//*[@id="ember14"]/div/div[1]/div[2]/div[2]/div[{0}]/div[3]'.format(i)).text
         apple_music_ranking.append([i-2, title, artist, today])
     return apple_music_ranking
 
